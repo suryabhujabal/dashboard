@@ -1,0 +1,11 @@
+
+<div>Showing preview for : {{widgetDetails.views[0].keyLabel}}</div>
+<div>Widget Type : {{widgetDetails.views[0].type}}</div>
+
+<br/>
+<br/>
+<br/>
+
+<div class="widget-values" ng-if="widgetDetails.views[0].model" ng-repeat="modelVal in widgetDetails.views[0].model">
+    <label>{{modelVal.key}} - {{modelVal.value}}</label>
+</div>
