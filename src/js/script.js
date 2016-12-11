@@ -22,6 +22,8 @@ app.directive("dashboardPreview",function(){
             widgetDetails :  '='
         },
         controller : function($scope){
+
+
             
         }
     }
