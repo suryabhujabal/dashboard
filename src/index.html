@@ -7,6 +7,8 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/ionic/1.2.4/css/ionic.css" rel="stylesheet"/>
         <link href="./style/css/style.css" rel="stylesheet"/>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-route.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
     </head>
     <body ng-controller="widgetCtrl">
     <div class="dashboard-header" style="padding:5px; border: 1px dotted black">
@@ -16,18 +18,23 @@
                     <div class="card" style="border:1px solid red;cursor:pointer;" ng-click="showWidget(widget)">
                         {{widget.widgetName}} - {{widget.widgetValue}}
                     </div>
+                    <button ng-click="loadTemplate(widget)">{{widget.widgetName}}</button>
                 </div>
             </div>
             <hr/>
 
-            <div class="row">
-                <div class="col">
-                    <dashboard-preview active-widget="activeWidget" widget-details="widgetDetails"></dashboard-preview>
-                </div>
-            </div>
+            <div class="widget-preview"></div>
+
+
+            <!--<div class="row">-->
+                <!--<div class="col">-->
+                    <!--<dashboard-preview active-widget="activeWidget" widget-details="widgetDetails"></dashboard-preview>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
     </div>
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/upload.js"></script>
     </body>
 
 </html>
